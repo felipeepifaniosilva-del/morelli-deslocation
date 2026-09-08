@@ -1,1 +1,274 @@
+/* CSS RESET E VARIÁVEIS DE CORES */
+:root {
+    --bg-color: #0b0d12;          /* Preto profundo para o fundo */
+    --card-bg: #161a23;           /* Preto secundário para os cards */
+    --text-color: #f0f4f8;        /* Branco suave para excelente leitura */
+    --text-muted: #a0aec0;        /* Cinza claro para textos secundários */
+    --primary-blue: #0088ff;      /* Azul elétrico vibrante */
+    --hover-blue: #0066cc;        /* Azul escuro para hover */
+    --focus-yellow: #ffeb3b;      /* Amarelo de alto contraste para acessibilidade */
+}
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* ACESSIBILIDADE - FOCO VISÍVEL PARA NAVEGAÇÃO POR TECLADO */
+a:focus, button:focus, input:focus, select:focus {
+    outline: 3px solid var(--focus-yellow) !important;
+    outline-offset: 3px;
+}
+
+/* BARRA DE ACESSIBILIDADE PARA IR DIRETO AO CONTEÚDO */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: var(--primary-blue);
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* CABEÇALHO / NAVBAR */
+header {
+    background-color: rgba(11, 13, 18, 0.95);
+    border-bottom: 2px solid var(--primary-blue);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--text-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* BOTÃO DE ACESSIBILIDADE */
+.accessibility-btn {
+    background: transparent;
+    border: 2px solid var(--primary-blue);
+    color: var(--text-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* BANNER PRINCIPAL (HERO) */
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0,136,255,0.15) 0%, rgba(11,13,18,1) 100%);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.cta-btn:hover {
+    background-color: var(--hover-blue);
+    transform: translateY(-2px);
+}
+
+/* SEÇÃO DE CARROS (VITRINE) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--primary-blue);
+    padding-left: 10px;
+}
+
+.grid-cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.car-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a3142;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #222834;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-blue);
+}
+
+.car-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.car-brand {
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.car-model {
+    font-size: 1.4rem;
+    margin: 0.2rem 0 0.8rem 0;
+}
+
+.car-specs {
+    list-style: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.car-specs li {
+    margin-bottom: 0.3rem;
+}
+
+.car-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: auto;
+    color: #ffffff;
+}
+
+/* SEÇÃO PAGAMENTO E LOJAS (2 COLUNAS) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-box {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #2a3142;
+}
+
+.info-box h3 {
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    list-style-type: none;
+}
+
+.info-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #050608;
+    border-top: 1px solid #2a3142;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1.1rem; }
+}

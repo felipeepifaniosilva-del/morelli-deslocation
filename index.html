@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morelli Deslocation | Seu Próximo Carro Elétrico Tá Aqui!</title>
+    <!-- Fonte Inter para excelente legibilidade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Link de Acessibilidade para leitores de tela e teclado -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- CABEÇALHO -->
+    <header role="banner">
+        <a href="#" class="logo" aria-label="Página inicial Morelli Deslocation">Morelli <span>Deslocation</span></a>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="#estoque">Nossos Carros</a></li>
+                <li><a href="#pagamento">Como Pagar</a></li>
+                <li><a href="#lojas">Onde Tamos</a></li>
+            </ul>
+        </nav>
+        <button class="accessibility-btn" id="btn-contraste" aria-label="Alternar modo de alto contraste">Alto Contraste</button>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal">
+
+        <!-- BANNER DE BOAS-VINDAS -->
+        <section class="hero" aria-labelledby="titulo-hero">
+            <h1 id="titulo-hero">Seu próximo elétrico tá te esperando. Sem enrolação! ⚡</h1>
+            <p>Quer rodar por aí sem gastar nada de gasolina e ainda tirar onda de carro zero emissão? Na <strong>Morelli Deslocation</strong> a gente te conecta com os elétricos mais brutos do mercado. Cola com a gente!</p>
+            <a href="#estoque" class="cta-btn" role="button">Ver as Naves Disponíveis</a>
+        </section>
+
+        <!-- VITRINE DE CARROS -->
+        <section id="estoque" class="container" aria-labelledby="titulo-estoque">
+            <h2 id="titulo-estoque" class="section-title">As Naves do Estoque</h2>
+            
+            <div class="grid-cars">
+
+                <!-- Carro 1 -->
+                <article class="car-card" aria-label="Carro BYD Dolphin Mini">
+                    <div class="car-img-placeholder" aria-hidden="true">
+                        <svg width="64" height="64" fill="currentColor" viewBox="0 0 16 16"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/><path d="M2.52 3.515A.5.5 0 0 1 3 3h10a.5.5 0 0 1 .48.343l1.854 5.563A2.5 2.5 0 0 1 13 12h-1a.5.5 0 0 1-.5-.5V11h-7v.5a.5.5 0 0 1-.5.5H3a2.5 2.5 0 0 1-2.334-3.094l1.854-5.563zM3 4l-1.5 4.5h13L13 4H3z"/></svg>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">BYD</span>
+                        <h3 class="car-model">Dolphin Mini</h3>
+                        <ul class="car-specs">
+                            <li>🔋 Autonomia: até 280 km</li>
+                            <li>⚡ 100% Elétrico e compacto</li>
+                            <li>📱 Tela multimídia giratória</li>
+                        </ul>
+                        <p class="car-price">R$ 115.800</p>
+                    </div>
+                </article>
+
+                <!-- Carro 2 -->
+                <article class="car-card" aria-label="Carro Volvo EX30">
+                    <div class="car-img-placeholder" aria-hidden="true">
+                        <svg width="64" height="64" fill="currentColor" viewBox="0 0 16 16"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/><path d="M2.52 3.515A.5.5 0 0 1 3 3h10a.5.5 0 0 1 .48.343l1.854 5.563A2.5 2.5 0 0 1 13 12h-1a.5.5 0 0 1-.5-.5V11h-7v.5a.5.5 0 0 1-.5.5H3a2.5 2.5 0 0 1-2.334-3.094l1.854-5.563zM3 4l-1.5 4.5h13L13 4H3z"/></svg>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Volvo</span>
+                        <h3 class="car-model">EX30</h3>
+                        <ul class="car-specs">
+                            <li>🔋 Autonomia: até 340 km</li>
+                            <li>🚀 0 a 100 km/h em 5.7s</li>
+                            <li>🛡️ O topo em segurança</li>
+                        </ul>
+                        <p class="car-price">R$ 229.950</p>
+                    </div>
+                </article>
+
+                <!-- Carro 3 -->
+                <article class="car-card" aria-label="Carro GWM Ora 03">
+                    <div class="car-img-placeholder" aria-hidden="true">
+                        <svg width="64" height="64" fill="currentColor" viewBox="0 0 16 16"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/><path d="M2.52 3.515A.5.5 0 0 1 3 3h10a.5.5 0 0 1 .48.343l1.854 5.563A2.5 2.5 0 0 1 13 12h-1a.5.5 0 0 1-.5-.5V11h-7v.5a.5.5 0 0 1-.5.5H3a2.5 2.5 0 0 1-2.334-3.094l1.854-5.563zM3 4l-1.5 4.5h13L13 4H3z"/></svg>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">GWM</span>
+                        <h3 class="car-model">Ora 03 Skin</h3>
+                        <ul class="car-specs">
+                            <li>🔋 Autonomia: até 310 km</li>
+                            <li>🎨 Design retro-futurista</li>
+                            <li>🤖 Assistente de condução</li>
+                        </ul>
+                        <p class="car-price">R$ 150.000</p>
+                    </div>
+                </article>
+
+                <!-- Carro 4 -->
+                <article class="car-card" aria-label="Carro Tesla Model 3">
+                    <div class="car-img-placeholder" aria-hidden="true">
+                        <svg width="64" height="64" fill="currentColor" viewBox="0 0 16 16"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/><path d="M2.52 3.515A.5.5 0 0 1 3 3h10a.5.5 0 0 1 .48.343l1.854 5.563A2.5 2.5 0 0 1 13 12h-1a.5.5 0 0 1-.5-.5V11h-7v.5a.5.5 0 0 1-.5.5H3a2.5 2.5 0 0 1-2.334-3.094l1.854-5.563zM3 4l-1.5 4.5h13L13 4H3z"/></svg>
+                    </div>
+                    <div class="car-info">
+                        <span class="car-brand">Tesla</span>
+                        <h3 class="car-model">Model 3</h3>
+                        <ul class="car-specs">
+                            <li>🔋 Autonomia: até 500 km</li>
+                            <li>💻 Piloto Automático avançado</li>
+                            <li>🔥 O queridinho da gringa</li>
+                        </ul>
+                        <p class="car-price">R$ 349.000</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PAGAMENTO E LOJAS -->
+        <section class="container">
+            <div class="info-grid">
+
+                <article id="pagamento" class="info-box" aria-labelledby="titulo-pagamento">
+                    <h3 id="titulo-pagamento">Facilidades pra Pagar</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">Aqui você escolhe como prefere fechar o negócio. Na maciota!</p>
+                    <ul class="info-list">
+                        <li>💸 <strong>Pix com Desconto:</strong> Mandou Pix, levou desconto de verdade na hora.</li>
+                        <li>💳 <strong>Cartão em até 21x:</strong> Dá pra parcelar a entrada sem passar sufoco.</li>
+                        <li>🚗 <strong>Seu usado na troca:</strong> Aceitamos seu carro a combustão como parte do pagamento.</li>
+                        <li>🪙 <strong>Criptomoedas:</strong> Aceitamos Bitcoin e Ethereum de forma rápida e segura.</li>
+                        <li>📄 <strong>Financiamento Facilitado:</strong> Aprovamos sua ficha sem complicação pelo celular.</li>
+                    </ul>
+                </article>
+
+                <article id="lojas" class="info-box" aria-labelledby="titulo-lojas">
+                    <h3 id="titulo-lojas">Nossas Lojas Físicas</h3>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">Quer ver os carros de perto, trocar uma ideia e tomar um café? Encosta aqui:</p>
+                    <ul class="info-list">
+                        <li>📍 <strong>São Paulo - SP:</strong> Av. das Nações Unidas, 12000 - Brooklin</li>
+                        <li>📍 <strong>Rio de Janeiro - RJ:</strong> Av. das Américas, 3500 - Barra da Tijuca</li>
+                        <li>📍 <strong>Curitiba - PR:</strong> Av. Cândido de Abreu, 500 - Centro Cívico</li>
+                        <li>📍 <strong>Belo Horizonte - MG:</strong> Av. do Contorno, 6000 - Savassi</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer role="contentinfo">
+        <p>&copy; 2026 Morelli Deslocation. Todos os direitos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Feito com foco em acessibilidade e inovação para quem ama mobilidade elétrica.</p>
+    </footer>
+
+    <!-- Arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
